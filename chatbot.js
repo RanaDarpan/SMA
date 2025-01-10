@@ -56,9 +56,9 @@ async function chat() {
     const flowIdOrName = process.env.flowIdOrName;
     const langflowId = process.env.langflowId;
     const applicationToken = process.env.applicationToken;
-    
+    const LANGFLOW_BASE_URL=process.env.LANGFLOW_BASE_URL;
     const langflowClient = new LangflowClient(
-        'https://api.langflow.astra.datastax.com',
+        LANGFLOW_BASE_URL,
         applicationToken
     );
 
