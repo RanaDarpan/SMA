@@ -9,15 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         function showSection(sectionId) {
-            // Hide all sections
+       
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.add('hidden'));
     
-            // Show the selected section
+            
             const activeSection = document.getElementById(sectionId);
             activeSection.classList.remove('hidden');
     
-            // Update navbar links' active state
+           
             const links = document.querySelectorAll('.nav-links a');
             links.forEach(link => {
                 if (link.getAttribute('href').slice(1) === sectionId) {
@@ -27,8 +27,7 @@
                 }
             });
         }
-    
-        // Initially, show the home section when the page loads
+
         showSection('home');
     </script>
     
@@ -130,12 +129,12 @@
             <div class="developer-info">
                 <h2>Developer Information</h2>
                 <div class="developer-card">
-                    <img src="https://via.placeholder.com/150" alt="Developer" class="developer-image">
+                    <!-- <img src="" alt="Developer" class="developer-image"> -->
                     <h3>Dharmik Pathak</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
                         
-                        <!-- <a href="@example.com">Email</a> -->
+                        <a href="dharmikpathak31@gmail.com">Email</a>
                     </div>
                 </div>
                 <div class="developer-card">
@@ -147,14 +146,14 @@
                         <a href="randarpan0@gmail.com">Email</a>
                     </div>
                 </div><div class="developer-card">
-                    <img src="https://via.placeholder.com/150" alt="Developer" class="developer-image">
+                    <!-- <img src="https://via.placeholder.com/150" alt="Developer" class="developer-image"> -->
                     <h3>Dhairya Patel </h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
                         <a href="Dhairyadppatel071519@gmail.com">Email</a>
                     </div>
                 </div><div class="developer-card">
-                    <img src="https://via.placeholder.com/150" alt="Developer" class="developer-image">
+                    <img src="./images/p2.jpg" alt="Developer" class="developer-image">
                     <h3>Aryan Chalaliya</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">

@@ -12,14 +12,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
-const LANGFLOW_BASE_URL = 'https://api.langflow.astra.datastax.com';
-const APPLICATION_TOKEN = 'AstraCS:bQhhCvQmUvtDogFyrugaXyds:fa8b3ba5d3e7562d22b68083dd2a36a974921538d48f444b4cf74b2acdbfb88c';
+const LANGFLOW_BASE_URL = process.env.LANGFLOW_BASE_URL;
+const APPLICATION_TOKEN = process.env.applicationToken;
 
 app.post('/api/chat', async (req, res) => {
     try {
         const { message } = req.body;
-        const flowId = '32ef7cd3-c5df-4460-a5b2-ee2696efa5b1';
-        const langflowId = 'ac4ec456-dfb1-4a66-9866-fde97acd8a16';
+        const flowId = process.env.flowIdOrName;
+        const langflowId = process.env.langflowId;
         
         const endpoint = `/lf/${langflowId}/api/v1/run/${flowId}?stream=false`;
         const url = `${LANGFLOW_BASE_URL}${endpoint}`;

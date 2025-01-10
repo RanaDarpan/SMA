@@ -11,7 +11,7 @@ class ChatUI {
             }
         });
 
-        // Navigation
+       
         this.setupNavigation();
     }
 
@@ -24,11 +24,11 @@ class ChatUI {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
 
-                // Update active link
+              
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
 
-                // Show target section, hide others
+                
                 sections.forEach(section => {
                     if (section.id === targetId) {
                         section.classList.remove('hidden');
@@ -52,11 +52,10 @@ class ChatUI {
         const message = this.userInput.value.trim();
         if (!message) return;
 
-        // Disable input and button while processing
+        
         this.userInput.disabled = true;
         this.sendButton.disabled = true;
 
-        // Add user message to chat
         this.addMessage(message, true);
         this.userInput.value = '';
 

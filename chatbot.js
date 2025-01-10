@@ -1,4 +1,6 @@
 import readline from 'readline-sync';
+import dotenv from "dotenv";
+dotenv.config();
 
 class LangflowClient {
     constructor(baseURL, applicationToken) {
@@ -51,9 +53,9 @@ class LangflowClient {
 }
 
 async function chat() {
-    const flowIdOrName = '32ef7cd3-c5df-4460-a5b2-ee2696efa5b1';
-    const langflowId = 'ac4ec456-dfb1-4a66-9866-fde97acd8a16';
-    const applicationToken = 'AstraCS:bQhhCvQmUvtDogFyrugaXyds:fa8b3ba5d3e7562d22b68083dd2a36a974921538d48f444b4cf74b2acdbfb88c';
+    const flowIdOrName = process.env.flowIdOrName;
+    const langflowId = process.env.langflowId;
+    const applicationToken = process.env.applicationToken;
     
     const langflowClient = new LangflowClient(
         'https://api.langflow.astra.datastax.com',

@@ -1,4 +1,3 @@
-
 // Process the social media data
 const processData = (data) => {
     const platformData = {};
