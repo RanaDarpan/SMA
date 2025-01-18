@@ -110,6 +110,19 @@ body {
     color: var(--primary);
     margin-bottom: 1rem;
 }
+.demo-video  h3 {
+    color: var(--primary);
+}
+.demo-video{
+    margin-top: 2rem;
+}
+.demo-video iframe {
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+}
 
 /* Chatbot Section */
 .chat-container {
@@ -295,3 +308,6 @@ body {
     border-radius: 8px;
     color: var(--text);
 }
+
+
+

@@ -8,42 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        function showSection(sectionId) {
-       
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.add('hidden'));
-    
-            
-            const activeSection = document.getElementById(sectionId);
-            activeSection.classList.remove('hidden');
-    
-           
-            const links = document.querySelectorAll('.nav-links a');
-            links.forEach(link => {
-                if (link.getAttribute('href').slice(1) === sectionId) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-
-        showSection('home');
+        
     </script>
     
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-links">
-            <nav class="navbar">
-                <div class="nav-links">
-                    <a href="#home" class="active" onclick="showSection('home')">Home</a>
-                    <a href="#chatbot" onclick="showSection('chatbot')">Chatbot</a>
-                    <a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a>
-                    <a href="#developer" onclick="showSection('developer')">Developer</a>
-                </div>
-            </nav>
-            
+            <a href="#home" class="active" onclick="showSection('home')">Home</a>
+            <a href="#chatbot" onclick="showSection('chatbot')">Chatbot</a>
+            <a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a>
+            <a href="#developer" onclick="showSection('developer')">Developer</a>
         </div>
     </nav>
 
@@ -65,6 +40,12 @@
                     <h3>Cross-Platform Analysis</h3>
                     <p>Track and analyze engagement across multiple social platforms</p>
                 </div>
+            </div>
+           
+            
+            <div class="demo-video">
+                <h3>Demo Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5BhJLPF7VV0?si=4ExEA9Tz1mxudzd8" title="Langflow Chatbot Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -129,36 +110,33 @@
             <div class="developer-info">
                 <h2>Developer Information</h2>
                 <div class="developer-card">
-                    <!-- <img src="" alt="Developer" class="developer-image"> -->
                     <h3>Dharmik Pathak</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
-                        
-                        <a href="dharmikpathak31@gmail.com">Email</a>
+                        <a href="mailto:dharmikpathak31@gmail.com">Email</a>
                     </div>
                 </div>
                 <div class="developer-card">
                     <img src="./images/profile.png" alt="Developer" class="developer-image">
-                    <h3>Rana Darpan </h3>
+                    <h3>Rana Darpan</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
-                        
-                        <a href="randarpan0@gmail.com">Email</a>
+                        <a href="mailto:randarpan0@gmail.com">Email</a>
                     </div>
-                </div><div class="developer-card">
-                    <!-- <img src="https://via.placeholder.com/150" alt="Developer" class="developer-image"> -->
-                    <h3>Dhairya Patel </h3>
+                </div>
+                <div class="developer-card">
+                    <h3>Dhairya Patel</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
-                        <a href="Dhairyadppatel071519@gmail.com">Email</a>
+                        <a href="mailto:Dhairyadppatel071519@gmail.com">Email</a>
                     </div>
-                </div><div class="developer-card">
+                </div>
+                <div class="developer-card">
                     <img src="./images/p2.jpg" alt="Developer" class="developer-image">
                     <h3>Aryan Chalaliya</h3>
                     <p>Senior Software Engineer</p>
                     <div class="social-links">
-                        
-                        <a href="aryanchalaliya3@gmail.com">Email</a>
+                        <a href="mailto:aryanchalaliya3@gmail.com">Email</a>
                     </div>
                 </div>
                 <div class="tech-stack">
@@ -174,6 +152,27 @@
         </section>
     </div>
 
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.remove('hidden');
+
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                if (link.getAttribute('href').slice(1) === sectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize the default section
+        showSection('home');
+    </script>
     <script src="app.js"></script>
     <script src="dashboard.js"></script>
 </body>

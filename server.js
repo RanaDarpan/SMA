@@ -13,7 +13,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
-
 const LANGFLOW_BASE_URL = process.env.LANGFLOW_BASE_URL;
 const APPLICATION_TOKEN = process.env.applicationToken;
 
