@@ -48,11 +48,8 @@ To run this project locally, follow the steps below:
    ```bash
    npm install
 
-3.** Run the application** :
+3. **Run the application :**
   ```bash
   npm start
-
-
-The application will now be running on http://localhost:3000.
 
 
